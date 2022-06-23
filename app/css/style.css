@@ -91,24 +91,24 @@ select {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
     -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -133,23 +133,23 @@ textarea {
     overflow: auto;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
     box-sizing: border-box;
     padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
     height: auto;
 }
 
-[type="search"] {
+[type=search] {
     -webkit-appearance: textfield;
     outline-offset: -2px;
 }
 
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -319,88 +319,209 @@ a:focus {
 }
 
 /*header*/
-/*test block*/
 .header {
-    width: 100%;
-    height: 8vh;
-    background-color: rgba(8, 68, 231, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #ffffff;
 }
 
-.nav__menu {
-    width: 100%;
-    height: 100%;
+.header__row {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-}
-
-.nav__menu--main {
-    list-style-type: none;
-    width: 50%;
-    height: 100%;
-    display: flex;
-}
-
-.nav__menu--main li {
-    margin-right: 2rem;
+    border-bottom: 1px solid #ececec;
     position: relative;
 }
 
-.nav__menu--main li:last-child {
-    margin-right: 0;
+.left__header {
+    display: flex;
+    align-items: center;
+    margin-left: -1rem;
 }
 
-.nav__menu--main li::after {
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: black;
+.burger__btn {
+    width: 6rem;
+    height: 7rem;
+    position: relative;
+    z-index: 50;
+}
+
+.burger__btn span {
+    width: 4rem;
+    height: 2px;
+    background-color: #212121;
     position: absolute;
-    bottom: -0.4rem;
-    left: 0;
-    transition: 0.3s ease-in-out;
+    top: calc(50% - 1px);
+    left: 1rem;
+    transition: background-color 0.1s linear, transform 0.15s linear, width 0.05s linear;
 }
 
-.nav__menu--main li:hover::after {
+.burger__btn span:first-child {
+    top: calc(50% - 10px);
+}
+
+.burger__btn span:last-child {
+    top: calc(50% + 8px);
+}
+
+.burger__btn:hover {
+    cursor: pointer;
+}
+
+.burger__btn:hover span {
+    background-color: #E3E3E3;
+}
+
+.burger__btn--open span:first-child {
+    width: 0;
+}
+
+.burger__btn--open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.burger__btn--open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.burger__btn--open span:last-child {
+    width: 0;
+}
+
+.search__icon {
+    width: 6rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.search__icon svg {
+    width: 3rem;
+    fill: #212121;
+    transition: fill 0.15s linear;
+}
+
+.search__icon:hover {
+    cursor: pointer;
+}
+
+.search__icon:hover svg {
+    fill: #E3E3E3;
+}
+
+.header__search {
+    position: absolute;
+    width: calc(100% - 12rem);
+    height: 7rem;
+    left: 12rem;
+    top: 0;
+    z-index: 50;
+    background-color: #ffffff;
+    transition: opacity 0.2s linear;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header__search--show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header__search--form {
     width: 100%;
-}
-
-.nav__menu--main li a {
-    text-decoration: none;
-    font-size: 2rem;
-    color: black;
-    font-weight: 600;
-}
-
-.nav__menu--social {
-    width: 50%;
     height: 100%;
     display: flex;
-    list-style-type: none;
-    justify-content: end;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.nav__menu--social li {
-    margin-left: 2rem;
+.header__search--form input {
+    width: 98%;
+    height: 3rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #212121;
 }
 
-.nav__menu--social li:first-child {
-    margin-left: 0;
+.header__search--form button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #E3E3E3;
+    transition: color 0.15s linear;
 }
 
-.nav__menu--social li a {
+.header__search--form button:hover {
+    cursor: pointer;
+    color: #212121;
+}
+
+.center__header {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+}
+
+.right__header {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    margin-right: -1rem;
+}
+
+.right__header--item {
+    width: 6rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.right__header--item a {
     text-decoration: none;
 }
 
-.nav__menu--social li a i {
-    color: red;
-    font-size: 2rem;
-    transition: color, linear, 0.3s;
+.right__header--item a svg {
+    width: 3rem;
+    fill: #212121;
+    transition: fill 0.15s linear;
 }
 
-.nav__menu--social li:hover a i {
-    color: black;
+.right__header--item:hover {
+    cursor: pointer;
+}
+
+.right__header--item:hover a svg {
+    fill: #E3E3E3;
+}
+
+.right__header--counter {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    background-color: #EC5C5D;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+._cart a svg {
+    width: 4rem;
 }

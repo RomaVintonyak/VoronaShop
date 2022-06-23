@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
   <!--custom styles-->
   <link rel="stylesheet" href="css/style.min.css" />
-  <meta name="description" content="" />
+  <meta name="description" content="Vorona internet marketplace" />
   <meta name="keywords" content="" />
   <meta name="google" content="notranslate" />
   <meta name="author" content="Roman Vintonyak" />
@@ -17,27 +17,62 @@
   <meta name="format-detection" content="telephone=no" />
   <!--BlackBerry-->
   <meta http-equiv="x-rim-auto-match" content="none" />
-  <title>Gulp&commat; &mdash; Task manager template</title>
+  <title>Vorona&commat; &mdash; Internet marketplace</title>
 </head>
 <body>
-
-
-  <!--test block-->
+  <!--header-->
   <header class="header" id="header">
     <div class="container">
-      <nav class="nav__menu">
-        <ul class="nav__menu--main">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li class="_callback"><a href="#">Contact</a></li>
-        </ul>
-        <ul class="nav__menu--social">
-          <li data-callback="zoom"><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li data-callback="zoom"><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      <div class="header__row">
+        <div class="left__header">
+          <div class="burger__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div><!--/.burger__btn-->
+          <div class="search__icon _searchBtn">
+            <svg class="img" >
+              <use xlink:href="img/sprite/search.svg#searchIcon"></use>
+            </svg>
+          </div><!--/.search__-->
+          <div class="header__search">
+            <form class="header__search--form" id="headerSearch">
+              <input type="text" id="searchInput" placeholder="Пошук по назві товару">
+              <button class="_closeSearch" type="button">&times;</button>
+            </form> 
+          </div><!--/.header__search-->
+        </div><!--/.left__header-->
+        <div class="center__header">
+          <div class="navbar__brand">
+            <a href="index.html">
+              <img src="img/header/logo.svg" alt="logo" class="img">
+            </a>
+          </div><!--/.navbar__brand-->
+        </div><!--/.center__header-->
+        <div class="right__header">
+          <div class="right__header--item _favorite">
+            <a href="#">
+              <svg class="img">
+                <use xlink:href="img/sprite/favorite.svg#favoriteIcon"></use>
+              </svg>
+            </a>
+            <div class="right__header--counter" id="favoriteCount">0</div>
+          </div><!--/.favorite-->
+          <div class="right__header--item _cart">
+            <a href="#">
+              <svg class="img">
+                <use xlink:href="img/sprite/cart.svg#cartIcon"></use>
+              </svg>
+            </a>
+            <div class="right__header--counter" id="cartCount">0</div>
+          </div><!--/.cart-->
+        </div><!--/.right__header-->
+      </div><!--/.header__row-->
+    </div><!--/.container-->
+  </header><!--/.header-->
+
+  
   
 
 
