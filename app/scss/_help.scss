@@ -3,6 +3,9 @@
 //*mixins*//
 @import "./mixin.scss"; 
 
+.has__menu--open{
+  overflow: hidden;
+}
 .img {
   display: block;
   max-width: 100%;

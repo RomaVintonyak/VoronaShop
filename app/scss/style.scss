@@ -12,7 +12,6 @@
 /*main style*/
 html{
   font-size: 10px;
-  overflow-x: hidden;
 }
 body{
   font-family: $font;
@@ -49,5 +48,11 @@ a {
 /*==============block=============*/
 /*container*/
 @import "block/container.scss";
+/*main*/
+@import "block/main.scss";
 /*header*/
 @import "block/header.scss";
+/*smNav*/
+@import "block/smNav.scss";
+/*main menu*/
+@import "block/mainMenu.scss";
