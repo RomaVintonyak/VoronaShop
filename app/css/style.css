@@ -550,7 +550,7 @@ a:focus {
 }
 
 ._cart a svg {
-    width: 4rem;
+    width: 3.5rem;
 }
 
 /*smNav*/
@@ -705,4 +705,90 @@ a:focus {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+.menu__info {
+    padding-left: 2rem;
+}
+
+.menu__info ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu__info ul li {
+    margin-bottom: 2rem;
+    transition: margin-left 0.2s linear;
+}
+
+.menu__info ul li:last-child {
+    margin-bottom: 0;
+}
+
+.menu__info ul li:hover {
+    margin-left: 2rem;
+}
+
+.menu__info ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #212121;
+}
+
+.menu__contact {
+    text-align: left;
+}
+
+.menu__contact--phone {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.menu__contact--phone a {
+    text-decoration: none;
+    margin-bottom: 2rem;
+    color: #212121;
+    font-weight: 700;
+    font-size: 2.2rem;
+    transition: color 0.2s linear;
+}
+
+.menu__contact--phone a:last-child {
+    margin-bottom: 0;
+}
+
+.menu__contact--phone a:hover {
+    color: #E3E3E3;
+}
+
+.menu__contact--social {
+    display: flex;
+}
+
+.menu__contact--social a {
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.menu__contact--social a svg {
+    width: 3rem;
+    height: 3rem;
+    fill: #212121;
+    transition: fill 0.2s linear;
+}
+
+.menu__contact--social a:last-child {
+    margin-right: 0;
+}
+
+.menu__contact--social a:hover {
+    cursor: pointer;
+}
+
+.menu__contact--social a:hover svg {
+    fill: #E3E3E3;
 }
