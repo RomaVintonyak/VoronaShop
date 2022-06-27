@@ -31,6 +31,12 @@
                border-top: 6px solid $black-l;
                margin-right: -1rem;
             }
+            &:hover{
+               .menu__cat{
+                  visibility: visible;
+                  opacity: 1;
+               }
+            }
          }
          &:last-child{
             margin-right: 0;
@@ -58,6 +64,37 @@
             &::after{
                opacity: 1;
                visibility: visible;
+            }
+         }
+      }
+      .menu__cat{
+         top: 100%;
+         padding: 2rem 0;
+         justify-content: flex-start;
+         width: 520px;
+         &--men{
+            margin-right: 7rem;
+         }
+         h3{
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+         }
+         ul{
+            li{
+               &:first-child{
+                  &::before{
+                     display: none;
+                  }
+               }
+               a{
+                  font-size: 1.4rem;
+               }
+               &:hover{
+                  &::after{
+                     opacity: 0;
+                     visibility: hidden;
+                  }
+               }
             }
          }
       }

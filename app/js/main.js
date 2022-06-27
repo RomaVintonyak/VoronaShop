@@ -22,4 +22,10 @@ jQuery(document).ready(function () {
   closeSearchBtn.on("click", function(){
     searchForm.removeClass("header__search--show");
   });
+  //show catalog list
+  var catBtn = $("._catalog__btn");
+  catBtn.on("click", function(){
+    $(this).toggleClass("roate__el");
+    $(".menu__cat").toggleClass("menu__cat--open");
+  });
 });
