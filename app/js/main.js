@@ -25,7 +25,34 @@ jQuery(document).ready(function () {
   //show catalog list
   var catBtn = $("._catalog__btn");
   catBtn.on("click", function(){
-    $(this).toggleClass("roate__el");
-    $(".menu__cat").toggleClass("menu__cat--open");
+    $(this).toggleClass("rotate__el");
+    $("._menuCat").toggleClass("menu__cat--open");
+  });
+  //intro slider
+  var introSlider = $('#introSlider');
+  introSlider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 800,
+    cssEase: 'ease-in',
+    zIndex: 2,
+    dots: true,
+    dotsClass: 'intro-dots',
+    arrows: true,
+    swipe: false,
+    touchMove: false,
+    focusOnSelect: false,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          swipe: true,
+          touchMove: true,
+        }
+      }
+    ]
   });
 });

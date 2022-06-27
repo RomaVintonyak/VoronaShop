@@ -1,0 +1,29 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.intro__row{
+   width: 100%;
+   position: relative;
+   &--title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 4;
+      background-color: rgba($silver,  0.4);
+      h1{
+         color: $black-l;
+         font-size: 6rem;
+         font-weight: 700;
+         margin-bottom: 1rem;
+      }
+      h2{
+         color: $black-l;
+         font-size: 4rem;
+         font-weight: 700;
+      }
+   }
+}
