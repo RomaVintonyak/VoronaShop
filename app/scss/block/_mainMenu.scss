@@ -2,8 +2,10 @@
 @import "./mixin.scss";
 
 .main__menu{
-   position: absolute;
+   position: fixed;
    top: 0;
+   right: 0;
+   bottom: 0;
    left: 0;
    width: 100%;
    height: 100vh;
@@ -13,11 +15,13 @@
    align-items: center;
    justify-content: center;
    visibility: hidden;
+   pointer-events: none;
    opacity: 0;
    transition: opacity 0.1s linear, visibility 0.1s linear;
    &--open{
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;
    }
    &--row{
       width: 100%;

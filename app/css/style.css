@@ -659,8 +659,10 @@ a:focus {
 
 /*main menu*/
 .main__menu {
-    position: absolute;
+    position: fixed;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -670,6 +672,7 @@ a:focus {
     align-items: center;
     justify-content: center;
     visibility: hidden;
+    pointer-events: none;
     opacity: 0;
     transition: opacity 0.1s linear, visibility 0.1s linear;
 }
@@ -677,6 +680,7 @@ a:focus {
 .main__menu--open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 .main__menu--row {
@@ -950,6 +954,86 @@ a:focus {
     color: #212121;
     font-size: 4rem;
     font-weight: 700;
+}
+
+/*buy*/
+.buy__now--row {
+    width: 100%;
+}
+
+.buy__now--title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.buy__now--title h2 {
+    color: #212121;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.buy__now--content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1.5rem;
+}
+
+.buy__card {
+    width: 33.33%;
+    padding: 1.5rem;
+}
+
+.buy__card--link {
+    overflow: hidden;
+    display: block;
+    background: no-repeat center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 135.135%;
+}
+
+.buy__card--link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: inherit;
+    transition: transform 0.3s linear;
+}
+
+.buy__card--caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.3s linear;
+}
+
+.buy__card--caption span {
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 0 3.6rem;
+    height: 4.3rem;
+    display: inline-flex;
+    align-items: center;
+    background: rgba(227, 227, 227, 0.8);
+    color: #212121;
+}
+
+.buy__card:hover .buy__card--link::after {
+    transform: scale(1.1);
+}
+
+.buy__card:hover .buy__card--link .buy__card--caption {
+    transform: translateX(1rem) translateY(-1rem);
 }
 
 /*============vendor=============*/
