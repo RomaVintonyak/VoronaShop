@@ -1036,6 +1036,50 @@ a:focus {
     transform: translateX(1rem) translateY(-1rem);
 }
 
+/*sales*/
+.top__sales--row {
+    width: 100%;
+}
+
+.top__sales--header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.sales__title h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #212121;
+}
+
+.sales__title h2 i {
+    margin-left: 0.4rem;
+}
+
+.sales__link {
+    text-decoration: none;
+    color: #212121;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.sales__link svg {
+    margin-left: 2rem;
+    width: 3rem;
+    height: 3rem;
+    fill: #212121;
+    transition: transform 0.2s linear;
+}
+
+.sales__link:hover svg {
+    transform: translateX(-1rem);
+}
+
 /*============vendor=============*/
 /*slick slider*/
 .slick-slider {
