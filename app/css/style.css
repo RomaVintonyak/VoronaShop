@@ -1049,6 +1049,12 @@ a:focus {
     margin-bottom: 2rem;
 }
 
+.top__sales--content {
+    margin: -1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .sales__title h2 {
     font-size: 4rem;
     font-weight: 700;
@@ -1078,6 +1084,112 @@ a:focus {
 
 .sales__link:hover svg {
     transform: translateX(-1rem);
+}
+
+.sales__card {
+    width: 25%;
+    padding: 1.5rem;
+    transition: background-color 0.1s linear, box-shadow 0.1s linear;
+}
+
+.sales__card--body {
+    width: 100%;
+    position: relative;
+}
+
+.sales__card--link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.sales__card--image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+}
+
+.sales__card--image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sales__card--image img:first-child {
+    z-index: 2;
+}
+
+.sales__card--caption {
+    padding: 1rem 0 1rem 0.5rem;
+}
+
+.sales__card:hover {
+    background-color: #ececec;
+    box-shadow: 0px 0px 4px 4px rgba(236, 236, 236, 0.4);
+}
+
+.sales__card:hover .sales__card--body .sales__card--image img {
+    z-index: 2;
+}
+
+.sales__card:hover .sales__card--body .sales__card--image img:first-child {
+    z-index: 1;
+}
+
+.image__labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #f2a965;
+    padding: 0.3rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.image__labels::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    right: -1.22rem;
+    top: 0;
+    border-top: 11px solid transparent;
+    border-left: 12px solid #f2a965;
+    border-bottom: 11px solid transparent;
+}
+
+.image__links {
+    display: block;
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 6;
+}
+
+.image__links svg {
+    height: 100%;
+}
+
+.caption__title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #212121;
+    margin-bottom: 1rem;
+}
+
+.caption__price {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #212121;
 }
 
 /*============vendor=============*/

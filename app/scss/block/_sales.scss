@@ -12,6 +12,11 @@
       align-items: flex-end;
       margin-bottom: 2rem;
    }
+   &--content {
+      margin: -1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+   }
 }
 .sales__title {
    h2 {
@@ -23,23 +28,118 @@
       }
    }
 }
-.sales__link{
+.sales__link {
    text-decoration: none;
    color: $black-l;
    font-size: 1.8rem;
    text-transform: uppercase;
    display: flex;
    align-items: center;
-   svg{
+   svg {
       margin-left: 2rem;
       width: 3rem;
       height: 3rem;
       fill: $black-l;
       transition: transform 0.2s linear;
    }
-   &:hover{
-      svg{
+   &:hover {
+      svg {
          transform: translateX(-1rem);
       }
    }
+}
+.sales__card {
+   width: 25%;
+   padding: 1.5rem;
+   transition: background-color 0.1s linear, box-shadow 0.1s linear;
+   &--body {
+      width: 100%;
+      position: relative;
+   }
+   &--link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+   }
+   &--image {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      height: 30rem;
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         &:first-child{
+            z-index: 2;
+         }
+      }
+   }
+   &--caption{
+      padding: 1rem 0 1rem 0.5rem;
+   }
+   &:hover {
+      background-color: $silver-l;
+      box-shadow: 0px 0px 4px 4px rgba(236, 236, 236, 0.4);
+      .sales__card--body {
+         .sales__card--image {
+            img {
+               z-index: 2;
+               &:first-child {
+                  z-index: 1;
+               }
+            }
+         }
+      }
+   }
+}
+.image__labels{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 3;
+   background-color: $orange;
+   padding: 0.3rem;
+   font-size: 1.4rem;
+   font-weight: 400;
+   color: $white;
+   &::after{
+      content: "";
+      position: absolute;
+      z-index: 3;
+      right: -1.22rem;
+      top: 0;
+      border-top: 11px solid transparent;
+      border-left: 12px solid $orange;
+      border-bottom: 11px solid transparent;
+   }
+}
+.image__links{
+   display: block;
+   text-decoration: none;
+   width: 3rem;
+   height: 3rem;
+   position: absolute;
+   right: 5%;
+   top: 5%;
+   z-index: 6;
+   svg{
+      height: 100%;
+
+   }
+}
+.caption__title{
+   font-size: 1.6rem;
+   font-weight: 400;
+   color: $black-l;
+   margin-bottom: 1rem;
+}
+.caption__price{
+   font-size: 1.6rem;
+   font-weight: 400;
+   color: $black-l;
 }
