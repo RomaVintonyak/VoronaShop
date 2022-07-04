@@ -58,3 +58,29 @@
       font-weight: 400;
    }
 }
+.reviews__button {
+   width: 100%;
+   text-align: center;
+   &--btn{
+      background: transparent;
+      border: none;
+      padding: 0;
+      outline: none;
+      height: 4.3rem;
+      color: $black-l;
+      border: 1px solid $black-l;
+      font-weight: 700;
+      font-size: 1.6rem;
+      appearance: none;
+      padding: 0 3rem;
+      cursor: pointer;
+      transition: color 0.2s linear, background-color 0.2s linear;
+      &:hover{
+         background-color: $black-l;
+         color: $white;
+      }
+      //display: inline-flex;
+      //align-items: center;
+      //justify-content: center;
+   }
+}

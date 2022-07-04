@@ -1261,6 +1261,140 @@ a:focus {
     font-weight: 400;
 }
 
+.reviews__button {
+    width: 100%;
+    text-align: center;
+}
+
+.reviews__button--btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    height: 4.3rem;
+    color: #212121;
+    border: 1px solid #212121;
+    font-weight: 700;
+    font-size: 1.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 3rem;
+    cursor: pointer;
+    transition: color 0.2s linear, background-color 0.2s linear;
+}
+
+.reviews__button--btn:hover {
+    background-color: #212121;
+    color: #ffffff;
+}
+
+/*footer*/
+.footer {
+    background-color: #f2f2f2;
+    padding: 4rem 0;
+}
+
+.footer__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
+}
+
+.footer__contact--phone {
+    margin-bottom: 2rem;
+}
+
+.footer__contact--phone a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #212121;
+    text-decoration: none;
+    display: block;
+}
+
+.footer__contact--phone a:first-child {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer__contact--social h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #212121;
+    font-size: 1.6rem;
+}
+
+.social__list {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.social__list a {
+    display: block;
+    text-decoration: none;
+}
+
+.social__list a svg {
+    width: 3rem;
+    height: 3rem;
+    transition: fill 0.2s linear;
+}
+
+.social__list a:first-child {
+    margin-right: 1rem;
+}
+
+.social__list a:hover svg {
+    fill: #E3E3E3;
+}
+
+.footer__menu {
+    width: 55%;
+}
+
+.footer__menu .menu__cat {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+}
+
+.footer__menu .menu__cat h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.footer__menu .menu__cat ul {
+    list-style-type: none;
+}
+
+.footer__menu .menu__cat ul li {
+    transition: transform 0.2s linear;
+}
+
+.footer__menu .menu__cat ul li:hover {
+    transform: translateX(1rem);
+}
+
+.footer__menu .menu__cat ul li:hover a {
+    color: #212121;
+}
+
+.footer__nav {
+    width: 20%;
+}
+
 /*============vendor=============*/
 /*slick slider*/
 .slick-slider {
