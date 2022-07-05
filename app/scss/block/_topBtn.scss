@@ -1,0 +1,90 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.back__top {
+   position: fixed;
+   bottom: -4rem;
+   right: 3%;
+   z-index: 10;
+   width: 4rem;
+   height: 4rem;
+   background-color: $silver;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: bottom 0.2s linear;
+   &--btn {
+      fill: $black-l;
+      width: 2rem;
+      height: 2rem;
+      display: block;
+      transform: rotate(-90deg);
+   }
+   &:hover {
+      cursor: pointer;
+      svg {
+         animation-name: animationBtn;
+         animation-duration: 0.8s;
+         animation-timing-function: ease-out;
+      }
+   }
+}
+
+@keyframes animationBtn {
+   0%,
+   50%,
+   100% {
+      transform: translateY(0) rotate(-90deg);
+   }
+   25%,
+   75% {
+      transform: translateY(-6px) rotate(-90deg);
+   }
+}
+
+@keyframes hvr-icon-up {
+   0%,
+   50%,
+   100% {
+      transform: translateY(0) rotate(-90deg);
+   }
+   25%,
+   75% {
+      transform: translateY(-6px) rotate(-90deg);
+   }
+}
+/* Icon Up */
+.hvr-icon-up {
+   -webkit-transform: perspective(1px) translateZ(0);
+   transform: perspective(1px) translateZ(0);
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-up {
+   .hvr-icon {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+   }
+}
+.hvr-icon-up {
+   &:hover {
+      .hvr-icon {
+         animation-name: hvr-icon-up;
+         animation-duration: 0.8s;
+         animation-timing-function: ease-out;
+      }
+   }
+   &:focus {
+      .hvr-icon {
+         animation-name: hvr-icon-up;
+         animation-duration: 0.8s;
+         animation-timing-function: ease-out;
+      }
+   }
+   &:active {
+      .hvr-icon {
+         animation-name: hvr-icon-up;
+         animation-duration: 0.8s;
+         animation-timing-function: ease-out;
+      }
+   }
+}

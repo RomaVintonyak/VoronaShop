@@ -55,4 +55,22 @@ jQuery(document).ready(function () {
       }
     ]
   });
+  //back top btn
+  var topBtn = $(".back__top");
+  var introH = $("#header").innerHeight()*3;
+  $(window).on("scroll", function(){
+    if($(this).scrollTop() >= introH ){
+      topBtn.css({
+        "bottom": "0"
+      });
+    }else{
+      topBtn.removeAttr("style");
+    }
+  });
+  topBtn.on("click", function(event){
+    event.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, 1000);
+  });
 });
