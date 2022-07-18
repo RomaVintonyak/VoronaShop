@@ -1,0 +1,66 @@
+//*mixins*//
+@import "./mixin.scss";
+
+.about__us {
+   &--row {
+   }
+   &--header {
+      text-align: center;
+      margin-bottom: 2rem;
+      h3 {
+         color: $black-l;
+         font-size: 2.8rem;
+         font-weight: 700;
+      }
+   }
+   &--description {
+      text-align: center;
+      margin-bottom: 4rem;
+      p {
+         color: $black-l;
+         font-weight: 400;
+         font-size: 1.6rem;
+      }
+   }
+   &--list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+   }
+}
+.list__text {
+   width: 48%;
+   h3 {
+      margin-bottom: 2rem;
+      color: $black-l;
+      font-size: 2.8rem;
+      font-weight: 700;
+   }
+   ul {
+      margin: 0;
+      padding: 0;
+      padding-left: 2rem;
+      li {
+         color: $black-l;
+         font-weight: 400;
+         font-size: 1.6rem;
+         margin-bottom: 2rem;
+      }
+   }
+   p {
+      color: $black-l;
+      font-weight: 400;
+      font-size: 1.6rem;
+   }
+}
+.list__img {
+   width: 48%;
+   overflow: hidden;
+   picture {
+      img {
+         width: 100%;
+         height: auto;
+         display: block;
+      }
+   }
+}

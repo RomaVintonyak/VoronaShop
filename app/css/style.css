@@ -1566,6 +1566,76 @@ a:focus {
     animation-timing-function: ease-out;
 }
 
+/*about page*/
+.about__us--header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about__us--header h3 {
+    color: #212121;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.about__us--description {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about__us--description p {
+    color: #212121;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.about__us--list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.list__text {
+    width: 48%;
+}
+
+.list__text h3 {
+    margin-bottom: 2rem;
+    color: #212121;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.list__text ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 2rem;
+}
+
+.list__text ul li {
+    color: #212121;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.list__text p {
+    color: #212121;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.list__img {
+    width: 48%;
+    overflow: hidden;
+}
+
+.list__img picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /*============vendor=============*/
 /*slick slider*/
 .slick-slider {
