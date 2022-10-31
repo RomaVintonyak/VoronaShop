@@ -1636,6 +1636,13 @@ a:focus {
     display: block;
 }
 
+/*offer page*/
+.offer .offer__title h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #212121;
+}
+
 /*============vendor=============*/
 /*slick slider*/
 .slick-slider {
