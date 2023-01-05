@@ -1682,6 +1682,17 @@ a:focus {
     margin-bottom: 0;
 }
 
+.block__content li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.block__content li a:hover {
+    text-decoration: underline;
+}
+
 .block__content li:last-child {
     margin-bottom: 0;
 }
